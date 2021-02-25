@@ -136,23 +136,6 @@ class ShotPath:
         """Format the stdout string.
         The following directives can be embedded in the format string.
 
-        Directive : Meaning
-        'path': self.__path
-        'h': hierarchy
-        'p': project
-        'e': episode
-        'q': sequence
-        's': shot
-        't': task
-        'v': version
-        'w': wip
-        'E': episode_code
-        'Q': sequence_code
-        'S': shot_code
-        'V': version_code
-        'P': publish_code
-        'ext': ext
-
         :param fmt: Format string. Default is '{path}'.
         :return: Formatted string.
         """

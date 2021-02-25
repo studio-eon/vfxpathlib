@@ -17,19 +17,19 @@ class ShotPathTestCase(unittest.TestCase):
         )
 
     def test_format_2(self):
-        path = r'C:\show\bee\work\s010\0010\comp\wip\nk\bee_s010_0010_comp_v01_w01.nk'
+        path = r'C:\show\bee\work\fl01\0010\fx\wip\hip\bee_fl01_0010_fx_v01_w01.hip'
         sp = ShotPath(path)
         self.assertEqual(
-            r'C:\show\bee\work\s010\0010\comp\wip\nk\bee_s010_0010_comp_v01_w01.nk',
-            sp.format('{path}')
+            'bee_fl01_0010_fx_v01_w01',
+            sp.format('{p}_{q}_{s}_{t}_{v}_{w}')
         )
 
     def test_format_3(self):
-        path = '/show/cue/work/c010/mm/wip/ma/cue_c010_fx_v01_w01.ma'
+        path = '/show/cat/work/c001/comp/wip/nk/cat_c001_comp_v01_w01.nk'
         sp = ShotPath(path)
         self.assertEqual(
-            'cue_c010_fx_v01',
-            sp.format('{P}')
+            'cat_c001_comp_v01_w01',
+            sp.format('{p}_{s}_{t}_{v}_{w}')
         )
 
 if __name__ == '__main__':
